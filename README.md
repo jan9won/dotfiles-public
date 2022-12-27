@@ -7,7 +7,6 @@ Taking references from https://github.com/craftzdog/dotfiles-public.
 
 ### Shell Configurations
 - .zshrc
-- .bash_profile
 
 ### Editor Configurations
 - .vimrc

@@ -1,0 +1,27 @@
+[init]
+	defaultBranch = main
+[commit]
+	gpgsign = true
+[gpg]
+	program = /opt/homebrew/bin/gpg
+[user]
+	name = Your Name
+	email = your@email.address
+	signingkey = your gpg private key (--keyid-format=long)
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[alias]
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+	ac = !git add -A && git commit
+	bs = !git branch && git status | grep -ve .yarn/cache -e node_modules
+	bv = !git branch -v
+	bvv = !git branch -vv
+	avv = !git branch -avv
+	bn = git branch | grep "*" | sed "s/* //g" | pbcopy
+	ch = !git checkout
+	sw = !git switch
+[credential "https://github.com"]
+	helper = !/opt/homebrew/bin/gh auth git-credential
