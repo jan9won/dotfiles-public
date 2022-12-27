@@ -16,13 +16,3 @@ Taking references from https://github.com/craftzdog/dotfiles-public.
 - .gitconfig
 - .npmrc 
 
-## Other Applications
-
-### Dev Utilities
-- Docker Desktop
-
-### OSX Utilities (some paid)
-- Magnet
-- Alfred
-- Numi
-- Mac Fan Controls
